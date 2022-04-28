@@ -4,6 +4,7 @@ import sys
 
 def top_repository_from_github(programming_language: str, number: int):
     """
+
     The function receives a language and a number, and brings from the GitHub the number of repositories according
     to the number and language received, arranged according to the number of stars in descending order.
 
