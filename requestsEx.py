@@ -4,10 +4,10 @@ import sys
 
 def top_repository_from_github(programming_language: str, number: int):
     """
-     The function receives a language and a number, and brings from the GitHub the number of repositories according
-     to the number and language received, arranged according to the number of stars in descending order.
+    The function receives a language and a number, and brings from the GitHub the number of repositories according
+    to the number and language received, arranged according to the number of stars in descending order.
     :param programming_language: The language in which you want the repositories.
-    :param number: The number of repositories we want.
+    :param number: The language in which you want the repositories.
     """
     headers = {'Accept': 'application/vnd.github.v3+json'}
     username = sys.argv[1]
