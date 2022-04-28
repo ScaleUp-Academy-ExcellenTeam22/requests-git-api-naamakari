@@ -12,7 +12,7 @@ def top_repository_from_github(programming_language: str, number: int):
     :param number: The number of repositories we want.
     """
     headers = {'Accept': 'application/vnd.github.v3+json'}
-    username = sys.argv[1]
+    username = 'naamakari'
     token = sys.argv[2]
     response = requests.get('https://api.github.com/search/repositories?q=language:' + programming_language +
                             '&sort=stars&order=desc', headers=headers, auth=(username, token))
