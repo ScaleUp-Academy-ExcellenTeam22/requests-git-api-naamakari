@@ -1,10 +1,9 @@
 import requests
 import sys
-from typing import Tuple
-from github import GitHub
 
 
 def top_repository_from_github(programming_language: str, number: int):
+
     """
     The function receives a language and a number, and brings from the GitHub the number of repositories according
      to the number and language received, arranged according to the number of stars in descending order.
@@ -12,7 +11,7 @@ def top_repository_from_github(programming_language: str, number: int):
     :param number: The number of repositories we want.
     """
     headers = {'Accept': 'application/vnd.github.v3+json'}
-    username = 'naamakari'
+    username = sys.argv[1]
     token = sys.argv[2]
     response = requests.get('https://api.github.com/search/repositories?q=language:' + programming_language +
                             '&sort=stars&order=desc', headers=headers, auth=(username, token))
